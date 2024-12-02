@@ -1,0 +1,339 @@
+body {
+  text-align: center;
+  font-size: 1em;
+  font-family: verdana;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.2em;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 30px 0;
+  color: #333;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.row > div {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #bbb;
+  margin: 4px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.row > div.green {
+  --background: #5ac85a;
+  --border-color: #5ac85a;
+  animation: flip 0.5s ease forwards;
+}
+
+.row > div.gray {
+  --background: #a1a1a1;
+  --border-color: #a1a1a1;
+  animation: flip 0.5s ease forwards;
+}
+
+.row > div.yellow {
+  --background: #e2cc68;
+  --border-color: #e2cc68;
+  animation: flip 0.5s ease forwards;
+}
+
+.row > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.row > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.row > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.row > div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.row.current > div.filled {
+  animation: bounce 0.2s ease-in-out forwards;
+}
+
+.keypad {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.keypad > div {
+  margin: 5px;
+  width: 40px;
+  height: 50px;
+  background: #eee;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 50px;
+}
+
+.keypad > div.green{
+  background: #5ac85a;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.keypad > div.yellow{
+  background: #e2cc68;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.keypad > div.gray{
+  background: #a1a1a1;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+
+
+
+
+/* Container for Top K Words */
+.top-words-container {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  width: 350px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.top-words-container h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Table for the word details */
+.top-words-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #333;
+}
+
+.top-words-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.top-words-table td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Highlight the top word */
+.top-words-table tr:first-child {
+  background-color: #eaf7ff;
+  font-weight: bold;
+}
+
+/* Hover effect for table rows */
+.top-words-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Adjust column width */
+.top-words-table th,
+.top-words-table td {
+  word-wrap: break-word;
+}
+
+
+
+
+
+
+/* Shared Table Styling */
+.shared-table-container {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.shared-table-container h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.shared-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #333;
+}
+
+.shared-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.shared-table td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.shared-table tr:first-child {
+  background-color: #eaf7ff;
+  font-weight: bold;
+}
+
+.shared-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+.beta-modal {
+  width: 60%;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  text-align: center;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+
+
+
+
+.wordle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.left-panel {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-right: 2px solid #ddd;
+    height: 100%;
+}
+
+.main-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-panel {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 2px solid #ddd;
+    height: 100%;
+}
+
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    background: #fff;
+    border-color: #333
+
+  }
+  45% {
+    transform: rotateX(90deg);
+    background: #fff;
+    border-color: #333
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    color: #eee;
+  }
+  100% {
+    transform: rotateX(0);
+    background: var(--background);
+    border-color: var(--border-color);
+    color: #eee;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    border-color: #ddd;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    border-color: #333;
+  }
+}
